@@ -1,10 +1,10 @@
-import cls from './NotFoundPage.module.scss';
-
+import { useTranslation } from 'react-i18next';
 
 export const NotFoundPage = () => {
+    const { t } = useTranslation();
     return (
         <div>
-            NOT FOUND PAGE!!!
+            {t('NOT_FOUND_PAGE')}
         </div>
     );
 };
