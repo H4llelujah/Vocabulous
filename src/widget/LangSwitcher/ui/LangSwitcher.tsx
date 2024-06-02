@@ -11,7 +11,7 @@ enum Language {
 }
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     const changeLang = () => {
         if (i18n.language === Language.RU) {
@@ -23,7 +23,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
 
     return (
         <button onClick={changeLang} type="button">
-            {i18n.language}
+            {t('ru')}
         </button>
     );
 };

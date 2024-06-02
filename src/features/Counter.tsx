@@ -11,6 +11,7 @@ export const Counter = () => {
     const decriment = () => {
         setValue((prev) => prev - 1);
     };
+
     return (
         <div>
             {value}

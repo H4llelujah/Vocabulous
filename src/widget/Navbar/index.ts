@@ -1,3 +1,3 @@
 export {
     Navbar,
-} from './ui/Navbar';
+} from './ui/Navbar/Navbar';

@@ -5,9 +5,9 @@ export type AdditionalCls = Array<string | undefined>;
 export function classNames(mainCls: string, mods: Mods = {}, additional: AdditionalCls = []): string {
     return [
         mainCls,
-        ...additional,
+        ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([className, mod]) => Boolean(mod))
+            .filter(([className, value]) => Boolean(value))
             .map(([className]) => className),
     ].join(' ');
 }
