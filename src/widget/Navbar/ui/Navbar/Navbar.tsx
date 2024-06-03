@@ -2,7 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { useMemo } from 'react';
 import { NavbarItemList } from 'widget/Navbar/model/item';
-import Logo from 'shared/assets/icons/logo.png';
+import ProfileIcon from 'shared/assets/icons/user.svg';
+import NotificationIcon from 'shared/assets/icons/notification.svg';
+import { LogoLink } from 'shared/ui/LogoLink/LogoLink';
+import { InteractionIcon } from 'shared/ui/InteractionIcon/InteractionIcon';
 import cls from './Navbar.module.scss';
 import { NavbarItem } from '../NavbarItem/NavbarItem';
 
@@ -29,12 +32,13 @@ export const Navbar = ({ className }: NavbarProps) => {
 
     return (
         <div className={classNames(cls.Navbar, mods, [className])}>
-            <img className={cls.logo} src={Logo} alt="" />
-            <div className="links">
+            <LogoLink className={cls.logo} />
+            <div className={cls.links}>
                 {NavbarLinkList}
             </div>
-            <div className="user_panel">
-                {t('Panel')}
+            <div className={cls.userPanel}>
+                <InteractionIcon className={cls.notificationButton} Icon={NotificationIcon} />
+                <InteractionIcon Icon={ProfileIcon} />
             </div>
         </div>
     );

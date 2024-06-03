@@ -7,11 +7,19 @@ export interface NavbarItemType {
 
 export const NavbarItemList: NavbarItemType[] = [
     {
-        path: RoutePaths.main,
-        text: 'Главная',
+        path: RoutePaths.modules,
+        text: 'My modules',
     },
     {
-        path: RoutePaths.about,
-        text: 'О нас',
+        path: RoutePaths.topics,
+        text: 'Topics',
+    },
+    {
+        path: RoutePaths.test_creation,
+        text: 'Create a test',
+    },
+    {
+        path: RoutePaths.translator,
+        text: 'Translator',
     },
 ];

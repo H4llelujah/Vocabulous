@@ -1,3 +1,22 @@
 .Navbar {
     display: flex;
+    justify-content: space-between;
+    margin: 30px 30px 10px;
+    align-items: center;
 }
+
+.userPanel {
+    display: flex;
+}
+
+.notificationButton {
+    margin-right: 10px;
+}
+
+.links{
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
